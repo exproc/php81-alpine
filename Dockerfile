@@ -74,7 +74,7 @@ RUN \
     /etc/periodic/daily/logrotate
    
 COPY root/ /
-
+ENTRYPOINT ["/init"] 
 # ports and volumes
 
 VOLUME /config
