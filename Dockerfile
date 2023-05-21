@@ -57,6 +57,7 @@ RUN \
     php81-xsl \
     php81-zip \
     php81-fpm\
+    openssl \
     logrotate \
     nginx && \
     apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
