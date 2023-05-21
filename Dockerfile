@@ -1,6 +1,13 @@
 FROM ghcr.io/exproc/base
-LABEL Maintainer="Chris c <chris@cchalifo.xyz>"
-LABEL Description="Alpine Linux edge Php 8.1"
+ENV PS1="$(whoami)@$(hostname):$(pwd)\\$ " \
+  HOME="/root" \
+  TERM="xterm" \
+  S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
+  S6_VERBOSITY=1 \
+  S6_STAGE2_HOOK=/docker-mods \
+  VIRTUAL_ENV=/lsiopy \
+  PATH="/lsiopy/bin:$PATH"
+
 RUN \
   echo "**** install runtime packages ****" && \
   apk add --no-cache  \
@@ -74,7 +81,7 @@ RUN \
     /etc/periodic/daily/logrotate
    
 COPY root/ /
-#ENTRYPOINT ["/init"] 
+ENTRYPOINT ["/init"] 
 # ports and volumes
 
 VOLUME /config
