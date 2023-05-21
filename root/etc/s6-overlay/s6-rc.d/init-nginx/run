@@ -16,16 +16,16 @@ fi
 sed -i -E "s#^(\s*)include /config/nginx/site-confs/\*;#\1include /config/nginx/site-confs/\*.conf;#" /config/nginx/nginx.conf
 
 # copy index.html if no index file exists
-INDEX_EXISTS=false
-for file in /config/www/index.*; do
-    if [[ -e "${file}" ]]; then
-        INDEX_EXISTS=true
-        break
-    fi
-done
-if [[ ${INDEX_EXISTS} == false ]] && grep -Eq '^\s*index[^#]*index\.html' /config/nginx/**/*.conf; then
-    cp /defaults/www/index.html /config/www/index.html
-fi
+#INDEX_EXISTS=false
+#for file in /config/www/index.*; do
+#    if [[ -e "${file}" ]]; then
+#        INDEX_EXISTS=true
+ #       break
+ #   fi
+#done
+#if [[ ${INDEX_EXISTS} == false ]] && grep -Eq '^\s*index[^#]*index\.html' /config/nginx/**/*.conf; then
+ #   cp /defaults/www/index.html /config/www/index.html
+#fi
 
 # copy pre-generated dhparams or generate if needed
 if [[ ! -f /config/nginx/dhparams.pem ]]; then

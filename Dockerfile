@@ -95,6 +95,6 @@ COPY root/ /
 ENTRYPOINT ["/init"] 
 # ports and volumes
 
-VOLUME /config
+#VOLUME /config
 
 EXPOSE 80 443 
