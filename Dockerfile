@@ -20,6 +20,7 @@ RUN \
   apk add --no-cache  \
     s6 \
     s6-overlay \
+    openssl \
     php81-bcmath \
     php81-bz2 \
     php81-ctype \
