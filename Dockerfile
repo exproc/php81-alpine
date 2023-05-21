@@ -1,4 +1,4 @@
-FROM ghcr.io/exproc/base-alpine-e
+FROM ghcr.io/exproc/base
 LABEL Maintainer="Chris c <chris@cchalifo.xyz>"
 LABEL Description="Alpine Linux edge Php 8.1"
 RUN \
