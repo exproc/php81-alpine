@@ -76,4 +76,7 @@ RUN \
 COPY root/ /
 
 # ports and volumes
+
+VOLUME /config
+
 EXPOSE 80 443 
