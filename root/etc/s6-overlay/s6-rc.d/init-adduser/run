@@ -41,7 +41,7 @@ if [[ ! -f /config/php/www2.conf ]]; then
 fi
 
 # copy user www2.conf to image
-cp /config/php/www2.conf /etc/php82/php-fpm.d/www2.conf
+cp /config/php/www2.conf /etc/php81/php-fpm.d/www2.conf
 
 # copy default config files if they don't exist
 if [[ ! -f /config/nginx/nginx.conf ]]; then
