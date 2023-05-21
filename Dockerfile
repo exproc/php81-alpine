@@ -1,9 +1,14 @@
 FROM ghcr.io/exproc/base
+
+ADD --chmod=744 "https://raw.githubusercontent.com/linuxserver/docker-mods/mod-scripts/docker-mods.${MODS_VERSION}" "/docker-mods"
+ADD --chmod=744 "https://raw.githubusercontent.com/linuxserver/docker-mods/mod-scripts/package-install.${PKG_INST_VERSION}" "/etc/s6-overlay/s6-rc.d/init-mods-package-install/run"
+
 ENV PS1="$(whoami)@$(hostname):$(pwd)\\$ " \
   HOME="/root" \
   TERM="xterm" \
   S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
   S6_VERBOSITY=1 \
+  S6_STAGE2_HOOK=/docker-mods \
   VIRTUAL_ENV=/lsiopy \
   PATH="/lsiopy/bin:$PATH"
 
