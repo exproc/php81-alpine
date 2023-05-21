@@ -4,7 +4,6 @@ ENV PS1="$(whoami)@$(hostname):$(pwd)\\$ " \
   TERM="xterm" \
   S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
   S6_VERBOSITY=1 \
-  S6_STAGE2_HOOK=/docker-mods \
   VIRTUAL_ENV=/lsiopy \
   PATH="/lsiopy/bin:$PATH"
 
