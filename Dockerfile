@@ -10,8 +10,7 @@ ENV PS1="$(whoami)@$(hostname):$(pwd)\\$ " \
 RUN \
   echo "**** install runtime packages ****" && \
   apk add --no-cache  \
-    s6 \
-    s6-overlay \
+  
     php81-bcmath \
     php81-bz2 \
     php81-ctype \
