@@ -17,8 +17,7 @@ echo "
 User UID:    $(id -u abc)
 User GID:    $(id -g abc)
 ───────────────────────────────────────
-"
-rm -rf /tftpboot
+
 lsiown abc:abc /tftpboot
 lsiown abc:abc /config
 lsiown abc:abc /defaults
