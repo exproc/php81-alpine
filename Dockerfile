@@ -42,6 +42,9 @@ RUN \
     php81-pdo_pgsql \
     php81-pdo_sqlite \
     php81-pear \
+    php81-sysvsem \
+    php81-fileinfo \
+    php81-simplexml \
     php81-pecl-apcu \
     php81-pecl-mailparse \
     php81-pecl-memcached \
@@ -55,6 +58,7 @@ RUN \
     php81-sqlite3 \
     php81-tokenizer \
     php81-xmlreader \
+    php81-xmlwriter \
     php81-xsl \
     php81-zip \
     php81-fpm\
