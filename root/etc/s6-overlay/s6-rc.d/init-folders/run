@@ -9,3 +9,5 @@ mkdir -p \
     /run \
     /var/lib/nginx/tmp/client_body \
     /var/tmp/nginx
+
+ln -sf /config/tftpboot/ /tftpboot/

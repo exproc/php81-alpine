@@ -22,4 +22,3 @@ rm -rf /tftpboot
 lsiown abc:abc /tftpboot
 lsiown abc:abc /config
 lsiown abc:abc /defaults
-ln -sf /config/tftpboot/ /tftpboot/
