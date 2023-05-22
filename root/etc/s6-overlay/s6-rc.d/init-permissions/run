@@ -13,7 +13,8 @@ lsiown -R abc:abc \
 
 lsiown abc:abc \
     /config/www \
-    /config/log
+    /config/log \
+    /config/tftpboot
 
 chmod -R g+w \
     /config/nginx
