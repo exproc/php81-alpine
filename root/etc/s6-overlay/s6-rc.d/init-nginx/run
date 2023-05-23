@@ -25,6 +25,9 @@ for file in /config/www/index.*; do
 done
 if [[ ${INDEX_EXISTS} == false ]] && grep -Eq '^\s*index[^#]*index\.html' /config/nginx/**/*.conf; then
    cp /defaults/www/index.html /config/www/index.html
+   cp /defaults/www/*.ico /config/www/
+   cp /defaults/www/*.css /config/www/
+   cp /defaults/www/*.php /config/www/
 fi
 
 # copy pre-generated dhparams or generate if needed
