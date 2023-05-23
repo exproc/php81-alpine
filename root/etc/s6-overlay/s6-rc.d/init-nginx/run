@@ -28,6 +28,7 @@ if [[ ${INDEX_EXISTS} == false ]] && grep -Eq '^\s*index[^#]*index\.html' /confi
    cp /defaults/www/*.ico /config/www/
    cp /defaults/www/*.css /config/www/
    cp /defaults/www/*.php /config/www/
+   cp /defaults/www/index.php /config/www/index.php
 fi
 
 # copy pre-generated dhparams or generate if needed
