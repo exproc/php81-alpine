@@ -11,7 +11,7 @@ lsiown -R abc:abc \
     /config/nginx \
     /config/php
 
-lsiown abc:abc \
+lsiown -R abc:abc \
     /config/www \
     /config/log \
     /config/tftpboot
