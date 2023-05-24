@@ -1,4 +1,7 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
-exec /usr/sbin/in.tftpd  -L --secure  ${PORT_RANGE:+--port-range $PORT_RANGE}  /tftpboot
+#exec \
+ #   s6-notifyoncheck -d -n 300 -w 1000 -c "nc -zu  69" \
+  #      /usr/sbin/in.tftpd  -L -u abc  ${PORT_RANGE:+--port-range $PORT_RANGE} --secure  /tftpboot
+exec /usr/sbin/in.tftpd  -L --secure -u abc  /tftpboot
