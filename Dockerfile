@@ -96,7 +96,6 @@ RUN \
     /etc/periodic/daily/logrotate
 
 COPY root/ /
-COPY root/srv/ /srv/
 RUN ls -la /srv
 ENTRYPOINT ["/init"] 
 # ports and volumes
