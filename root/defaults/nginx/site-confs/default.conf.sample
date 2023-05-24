@@ -8,7 +8,7 @@ server {
     #listen [::]:443 ssl http2 default_server;
 
     server_name _;
-    include /etc/nginx/snippets/error-page.conf;
+    include /etc/nginx/snippets/error-pages.conf;
     #include /config/nginx/ssl.conf;
 
    # set $root /app/www/public;

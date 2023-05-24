@@ -94,7 +94,7 @@ RUN \
     /etc/logrotate.conf && \
   sed -i 's#/usr/sbin/logrotate /etc/logrotate.conf#/usr/sbin/logrotate /etc/logrotate.conf -s /config/log/logrotate.status#g' \
     /etc/periodic/daily/logrotate
-   
+
 COPY root/ /
 ENTRYPOINT ["/init"] 
 # ports and volumes
