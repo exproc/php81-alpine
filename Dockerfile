@@ -98,6 +98,7 @@ RUN \
 
 COPY root/ /
 RUN ls -la /srv
+
 ENTRYPOINT ["/init"] 
 # ports and volumes
 
