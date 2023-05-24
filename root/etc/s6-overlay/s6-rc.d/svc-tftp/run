@@ -2,5 +2,5 @@
 # shellcheck shell=bash
 
 exec \
-    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -zu localhost 69" \
+    s6-notifyoncheck -d -n 300 -w 1000 -c "nc -zu  69" \
         /usr/sbin/in.tftpd --foreground --listen --user abc  ${PORT_RANGE:+--port-range $PORT_RANGE} --secure  /config/www
