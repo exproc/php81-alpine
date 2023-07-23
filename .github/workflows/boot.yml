@@ -14,7 +14,8 @@ env:
 
 jobs:
   login-GitHub:
-    runs-on: self-hosted
+    #runs-on: self-hosted
+    runs-on: ubuntu-latest 
     permissions:
       contents: read
       packages: write
